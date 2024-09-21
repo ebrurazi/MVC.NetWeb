@@ -1,0 +1,516 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Yazı tipini Poppins olarak ayarlayın */
+    background-color: #f8f9fa;
+    animation: fadeIn 2s;
+    height: 100vh;
+    margin: 0;
+    background-position: center; /* Ortala */
+    background-attachment: fixed; /* Arka planı sabitle */
+    display: flex;
+    flex-direction: column;
+}
+.top-section {
+    position: relative; /* Relative konumlandırma */
+    background-image: url('../images/torunGiris3.jpg'); /* Arka plan resmi */
+    background-size: cover; /* Resmi tam ekran kapla */
+    background-position: center; /* Ortala */
+    color: white; /* Yazı rengini beyaz yap */
+    width: 100vw; /* Tam genişlik */
+    min-height: 95vh; /* Yüksekliği artır */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0; /* Margin sıfırla */
+    padding: 0; /* Padding sıfırla */
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam arka plan */
+}
+
+.top-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Siyah renkte yarı saydam örtü */
+    z-index: 1; /* Üstte olması için z-index */
+}
+
+.top-section > * {
+    position: relative; /* İçerikleri üstte tutmak için relative konumlandırma */
+    z-index: 2; /* İçerikleri üstte tutmak için z-index */
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah arka plan */
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.solution-info {
+    background: rgba(255, 255, 255, 0.8); /* Yarı saydam beyaz arka plan */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left;
+    color: #000;
+}
+
+.solution-categories .category-item {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.solution-info2 {
+    background: rgba(255, 255, 255, 0.8); /* Yarı saydam beyaz arka plan */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: right;
+    color: #000;
+}
+
+.solution-categories .category-item2 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px; /* Header ve footer'dan biraz boşluk bırak */
+}
+
+.container-inner {
+    background: rgba(255, 255, 255, 0.8); /* Yarı saydam beyaz arka plan */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.display-4 {
+    font-weight: bold;
+    color: #800000;
+    font-size: 2.5rem;
+}
+
+.lead {
+    font-weight: 300; /* Daha ince bir yazı ağırlığı */
+    color: #fff; /* Beyaz yazı rengi */
+}
+
+.btn-primary {
+    background-color: #800000;
+    border-color: #800000;
+}
+
+.btn-primary:hover {
+    background-color: #a00000;
+    border-color: #a00000;
+}
+
+.btn-secondary {
+    background-color: #800000;
+    border-color: #800000;
+}
+
+.btn-secondary:hover {
+    background-color: #a00000;
+    border-color: #a00000;
+}
+
+.header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo img {
+    height: 60px;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header nav a {
+    color: #000;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.header nav a:hover {
+    color: #800000;
+}
+
+.header nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #800000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.header nav a:hover::after {
+    width: 100%;
+}
+
+.header nav a:focus {
+    outline: none;
+}
+
+.header nav a:active {
+    color: #800000;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Yüksekliği arttırdık */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Logonun boyutunu büyüttük */
+    margin-right: 10px; /* Logonun yanına biraz boşluk ekledik */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-text span {
+    color: rgb(168, 5, 5);
+    font-size: 1.5rem; /* Yazı boyutunu büyüttük */
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+.footer {
+    background-color:  #800000;;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+    color: white;
+    margin: 0;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 300; /* Daha ince bir yazı ağırlığı */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.logo-img {
+    height: 60px; /* Same height as in header */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.clickable-card:hover {
+    transform: scale(1.05);
+}
+
+.fixed-size {
+    height: 200px;
+    object-fit: cover;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources ul li {
+    margin: 10px 0;
+}
+.resources ul li a {
+    color: #FFFFFF; /* Beyaz renk */
+    text-decoration: none;
+    font-size: 0.9rem; /* Same font size */
+    font-weight: 300; /* Same font weight */
+}
+
+
+.resources ul li a:hover {
+    text-decoration: underline;
+}
+
+.step-indicators {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.step-indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #888;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.step-indicator::before, .step-indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: #dcdcdc;
+    z-index: -1;
+}
+
+.step-indicator::before {
+    left: -50%;
+}
+
+.step-indicator::after {
+    right: -50%;
+}
+
+.step-indicator:first-child::before {
+    content: none;
+}
+
+.step-indicator:last-child::after {
+    content: none;
+}
+
+.step-indicator.active {
+    background-color: #800000;
+    color: #fff;
+}
+
+.step-indicator.completed {
+    background-color: #000;
+    color: #fff;
+}
+
+.step-indicator.completed::before, .step-indicator.completed::after {
+    background-color: #000;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.is-valid {
+    border-color: green !important;
+}
+
+.is-invalid {
+    border-color: red !important;
+}
+
+.input-group-text {
+    background-color: #ffffff;
+    border-right: none;
+}
+
+.input-group .form-control,
+.input-group .form-control-file {
+    border-left: none;
+}
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.chat-header {
+    background-color: #800000;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.chat-body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 100%;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.chat-input {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    flex: none;
+}
+
+.chat-send {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-open {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, white, pink, red);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.chat-open img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.chat-open span {
+    font-size: 1rem;
+    color: #800000;
+    font-weight: bold;
+    position: absolute;
+    top: -30px;
+    text-align: center;
+    width: 100px;
+}
+
+.chat-open-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-open-text {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #800000;
+    font-weight: bold;
+}

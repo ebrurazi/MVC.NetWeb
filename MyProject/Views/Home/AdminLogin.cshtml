@@ -1,0 +1,116 @@
+@{
+    ViewData["Title"] = "Admin Giriş";
+    var user = ViewBag.User as string;
+}
+
+<!DOCTYPE html>
+<html dir="ltr" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="~/css/login.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header" id="main-content">
+        <div class="container logo d-flex align-items-center">
+            <a href="/Home/Index"><img src="~/images/logo.png" alt="Logo" class="logo-img"></a>
+            <nav class="ml-auto">
+                <a href="/Home/Index">ANA SAYFA</a>
+                <a href="/Home/SolutionDetails">ÇÖZÜMLER</a>
+                <a href="/Home/CreateSolution">ÇÖZÜM YAZMA</a>
+                <a href="/Home/AdminLogin">ADMİN GİRİŞ</a>
+                @if (string.IsNullOrEmpty(user))
+                {
+                    <a href="/Account/Register">KAYIT OL</a>
+                    <a href="/Home/Login">GİRİŞ YAP</a>
+                }
+                else
+                {
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hoş geldiniz, @user!
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userMenu">
+                            <a class="dropdown-item" href="/Home/Profile">Profilime Git</a>
+                            <a class="dropdown-item" href="/Home/Notifications">Bildirimler</a>
+                            <a class="dropdown-item" href="/Home/MySolutions">Çözümlerim</a>
+                            <a class="dropdown-item" href="/Home/Logout">Çıkış Yap</a>
+                        </div>
+                    </div>
+                }
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="center-container">
+            <div class="container-inner">
+                <h2 class="display-4">Admin Giriş</h2>
+                <form method="post" action="/Home/AdminLogin">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            </div>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Şifre" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                    @if (TempData["ErrorMessage"] != null)
+                    {
+                        <p class="text-danger mt-3">@TempData["ErrorMessage"]</p>
+                    }
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="container d-flex align-items-start">
+            <div class="mr-3">
+                <a href="/Home/Index"><img src="~/images/beyazLogo.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <div class="resources mr-auto">
+                <h5>İhtiyacınız Olabilecek Gereçler</h5>
+                <ul>
+                    <li><a href="/resources/KVKKAydın.pdf" target="_blank">KVKK Aydınlatma Metni</a></li>
+                    <li><a href="/resources/KVKKBasv.pdf" target="_blank">KVKK Başvuru Formu</a></li>
+                    <li><a href="/resources/Cerez_Politikasi.pdf" target="_blank">Çerez Politikası</a></li>
+                </ul>
+            </div>
+
+            <div class="ml-3">
+                <h5>İletişim Bilgileri</h5>
+                <a href="https://maps.app.goo.gl/vXNSqimWnfJVmk559" target="_blank">GOSB İhsan Dede Cad. No:116, 41400<br>Gebze/Kocaeli, TÜRKİYE</a>
+                <p>T: +90 262 677 15 00<br>
+                F: +90 262 677 15 15<br>
+                <a href="mailto:inquiry@torunmetal.com" target="_blank"> E: inquiry@torunmetal.com</a>
+            </div>
+            <div class="ml-auto">
+                <h5>Bizi Takip Edin</h5>
+                <a href="https://www.instagram.com/torunmetal/"><img src="~/images/instagramm.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://tr.linkedin.com/company/torungroup"><img src="~/images/linkedinn.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://www.youtube.com/c/torunmetalgroup"><img src="~/images/youtubee.png" alt="Youtube" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>  
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/custom.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+@model IEnumerable<SolutionSharingApp.Models.User>
+
+@{
+    ViewData["Title"] = "Kullanıcı Yönetimi";
+
+    var adminName = ViewBag.Admin as string;
+}
+
+<!DOCTYPE html>
+<html dir="ltr" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TORUN ÇÖZÜM VE DESTEK PLATFORMU, TORUN çalışanlarının işlerine, çevrelerine ve hayata değer katacak inovatif fikirlerini özgürce paylaşmalarını sağlar." />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/css/custom.css" rel="stylesheet"/>
+    <style>
+        .btn-active {
+            background-color: #508D4E;
+            color: white;
+        }
+        .btn-passive {
+            background-color: #800000;
+            color: white;
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        .search-box {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container logo-container">
+            <div class="logo">
+                <a href ="/Home/Index"><img src="~/images/logo.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <nav class="ml-auto">
+                <a href="/Second/Dashboard">DASHBOARD</a>
+                <a href="/Second/SolutionAdmin">ÇÖZÜM YÖNETİMİ</a>
+                <a href="/Second/SolutionUser">KULLANICI YÖNETİMİ</a> 
+                @if (!string.IsNullOrEmpty(adminName))
+                {
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hoş geldiniz, @adminName!
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userMenu">
+                            <a class="dropdown-item" href="/Second/Logout">Çıkış Yap</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <a href="/Home/Login">GİRİŞ YAP</a>
+                }
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h1>Kullanıcı Yönetimi</h1>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="İsim veya Email ile ara" class="form-control d-inline-block" style="width: 250px;" />
+            <button type="button" class="btn btn-primary" onclick="searchUsers()">Ara</button>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>İsim</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Durum</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                @if (Model != null && Model.Any())
+                {
+                    int count = 1;
+                    foreach (var user in Model)
+                    {
+                        <tr id="userRow_@user.Id">
+                            <td>@count</td>
+                            <td>@user.FirstName @user.LastName</td>
+                            <td>@user.Email</td>
+                            <td>@user.Role</td>
+                            <td>@(user.IsActive ? "Aktif" : "Pasif")</td>
+                            <td>
+                                <button type="button" class="btn btn-active" onclick="toggleUserStatus(@user.Id, true)">Aktif Yap</button>
+                                <button type="button" class="btn btn-passive" onclick="toggleUserStatus(@user.Id, false)">Pasif Yap</button>
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center">Kullanıcı bulunamadı.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container d-flex align-items-start">
+            <div class="mr-3">
+                <a href ="/Home/Index"><img src="~/images/beyazLogo.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <div class="resources mr-auto">
+                <h5>İhtiyacınız Olabilecek Gereçler</h5>
+                <ul>
+                    <li><a href="/resources/KVKKAydın.pdf" target="_blank">KVKK Aydınlatma Metni</a></li>
+                    <li><a href="/resources/KVKKBasv.pdf" target="_blank">KVKK Başvuru Formu</a></li>
+                    <li><a href="/resources/Cerez_Politikasi.pdf" target="_blank">Çerez Politikası</a></li>
+                </ul>
+            </div>
+
+            <div class="ml-3">
+                <h5>İletişim Bilgileri</h5>
+                <a href="https://maps.app.goo.gl/vXNSqimWnfJVmk559" target="_blank">GOSB İhsan Dede Cad. No:116, 41400<br>Gebze/Kocaeli, TÜRKİYE</a>
+                <p>T: +90 262 677 15 00<br>
+                F: +90 262 677 15 15<br>
+                <a href="mailto:inquiry@torunmetal.com" target="_blank"> E: inquiry@torunmetal.com</a>
+            </div>
+            <div class="ml-auto">
+                <h5>Bizi Takip Edin</h5>
+                <a href="https://www.instagram.com/torunmetal/"><img src="~/images/instagramm.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://tr.linkedin.com/company/torungroup"><img src="~/images/linkedinn.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://www.youtube.com/c/torunmetalgroup"><img src="~/images/youtubee.png" alt="Youtube" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function searchUsers() {
+            var searchValue = $('#searchInput').val().toLowerCase();
+            $('#userTableBody tr').filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(searchValue) > -1)
+            });
+        }
+
+        function toggleUserStatus(userId, isActive) {
+            $.post('/Second/ToggleUserStatus', { id: userId, isActive: isActive }, function(data) {
+                if (data.success) {
+                    var statusText = isActive ? "Aktif" : "Pasif";
+                    $('#userRow_' + userId + ' td:nth-child(5)').text(statusText);
+                }
+            });
+        }
+    </script>
+
+    <script src="~/js/custom.js"></script>
+</body>
+</html>

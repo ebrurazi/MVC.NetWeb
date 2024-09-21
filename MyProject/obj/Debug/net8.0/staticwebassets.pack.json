@@ -1,0 +1,369 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/obj/Debug/net8.0/scopedcss/projectbundle/MyProject.bundle.scp.css",
+      "PackagePath": "staticwebassets/MyProject.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/css/custom.css",
+      "PackagePath": "staticwebassets/css/custom.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/css/login.css",
+      "PackagePath": "staticwebassets/css/login.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/data/cost-2024-07-01-2024-10-01.json",
+      "PackagePath": "staticwebassets/data/cost-2024-07-01-2024-10-01.json"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/data/solutions.json",
+      "PackagePath": "staticwebassets/data/solutions.json"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/500X500_RED_LOGO.webp",
+      "PackagePath": "staticwebassets/images/500X500_RED_LOGO.webp"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/beyazLogo.png",
+      "PackagePath": "staticwebassets/images/beyazLogo.png"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/diger2.jpg",
+      "PackagePath": "staticwebassets/images/diger2.jpg"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/img2.jpg",
+      "PackagePath": "staticwebassets/images/img2.jpg"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/img3.jpg",
+      "PackagePath": "staticwebassets/images/img3.jpg"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/img4.jpg",
+      "PackagePath": "staticwebassets/images/img4.jpg"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/instagramm.png",
+      "PackagePath": "staticwebassets/images/instagramm.png"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/isci.jpg",
+      "PackagePath": "staticwebassets/images/isci.jpg"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/linkedinn.png",
+      "PackagePath": "staticwebassets/images/linkedinn.png"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/logo.png",
+      "PackagePath": "staticwebassets/images/logo.png"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/torunGiris.jpg",
+      "PackagePath": "staticwebassets/images/torunGiris.jpg"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/torunGiris2.jpg",
+      "PackagePath": "staticwebassets/images/torunGiris2.jpg"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/torunGiris3.jpg",
+      "PackagePath": "staticwebassets/images/torunGiris3.jpg"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/images/youtubee.png",
+      "PackagePath": "staticwebassets/images/youtubee.png"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/js/admin.js",
+      "PackagePath": "staticwebassets/js/admin.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/js/chat.js",
+      "PackagePath": "staticwebassets/js/chat.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/js/custom.js",
+      "PackagePath": "staticwebassets/js/custom.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/resources/Cerez_Politikasi.pdf",
+      "PackagePath": "staticwebassets/resources/Cerez_Politikasi.pdf"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/resources/KVKKAydın.pdf",
+      "PackagePath": "staticwebassets/resources/KVKKAydın.pdf"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/resources/KVKKBasv.pdf",
+      "PackagePath": "staticwebassets/resources/KVKKBasv.pdf"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/uploads/resim (5).png",
+      "PackagePath": "staticwebassets/uploads/resim (5).png"
+    },
+    {
+      "Id": "/Users/ebrurazi/Documents/StajProje/MyProject/wwwroot/uploads/resim (6).png",
+      "PackagePath": "staticwebassets/uploads/resim (6).png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MyProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.MyProject.props",
+      "PackagePath": "build\\MyProject.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.MyProject.props",
+      "PackagePath": "buildMultiTargeting\\MyProject.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.MyProject.props",
+      "PackagePath": "buildTransitive\\MyProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

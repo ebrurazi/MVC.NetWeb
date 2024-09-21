@@ -1,0 +1,358 @@
+@{
+    ViewData["Title"] = "Ana Sayfa";
+    var user = ViewBag.User as string;
+    var topSolutions = ViewBag.TopSolutions as List<SolutionSharingApp.Models.Solution>;
+}
+
+<!DOCTYPE html>
+<html dir="ltr" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TORUN ÇÖZÜM VE DESTEK PLATFORMU, TORUN çalışanlarının işlerine, çevrelerine ve hayata değer katacak inovatif fikirlerini özgürce paylaşmalarını sağlar." />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="~/css/custom.css" rel="stylesheet"/>
+    <style>
+        .card-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="main-content">
+        <div class="container logo d-flex align-items-center">
+            <a href ="/Home/Index"><img src="~/images/logo.png" alt="Logo" class="logo-img"></a>
+            <nav class="ml-auto">
+                <a href="/Home/Index">ANA SAYFA</a>
+                <a href="/Home/SolutionDetails">ÇÖZÜMLER</a>
+                <a href="/Home/CreateSolution">ÇÖZÜM YAZMA</a>
+                <a href="/Home/AdminLogin">ADMİN GİRİŞ</a>
+                @if (string.IsNullOrEmpty(user))
+                {
+                    <a href="/Account/Register">KAYIT OL</a>
+                    <a href="/Home/Login">GİRİŞ YAP</a>
+                }
+                else
+                {
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hoş geldiniz, @user!
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userMenu">
+                            <a class="dropdown-item" href="/Home/Profile">Profilime Git</a>
+                            <a class="dropdown-item" href="/Home/Notifications">Bildirimler</a>
+                            <a class="dropdown-item" href="/Home/MySolutions">Çözümlerim</a>
+                            <a class="dropdown-item" href="/Home/Logout">Çıkış Yap</a>
+                        </div>
+                    </div>
+                }
+            </nav>
+        </div>
+    </header>
+
+    <div class="top-section">
+        <div class="overlay">
+            <h1 class="display-4">Bir probleme çözümün mü var?</h1>
+            <h1 class="display-4">Torun çözüm ve destek platformu'na katılın ve çözümlerinizle katkıda bulunun!</h1>
+            <p class="lead">Torun çözüm ve destek platformu sayesinde aklındaki tüm problemlere çözüm bulabileceksin. Bize çözümlerinizi atmayı unutmayınız!</p>
+            <a class="btn btn-primary btn-lg" href="/Account/Register">Hesabınız yok mu?</a>
+            <a class="btn btn-secondary btn-lg ml-3" href="/Home/Login">Giriş yapın</a>
+        </div>
+    </div>
+    <!-- Çözümler Hakkında Bilgi Bölümü -->
+    <div class="solution-info container text-center mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="~/images/img2.jpg" alt="Çözüm Bilgisi" class="img-fluid small-img rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>Çözümlerimiz Hakkında</h2>
+                <p>Torun çözüm ve destek platformunda, çeşitli iş ve yaşam problemlerine inovatif çözümler bulabilirsiniz. Platformumuz, çalışanlarımızın bilgi ve deneyimlerini paylaşarak daha iyi bir çalışma ortamı yaratmayı hedefler.</p>
+                <p>Çözüm kategorilerimiz:</p>
+                <div class="solution-categories">
+                    <div class="category-item">Bilgisayar ve donanım sorunları</div>
+                    <div class="category-item">Ağ ve internet bağlantı problemleri</div>
+                    <div class="category-item">Yazılım ve güncelleme hataları</div>
+                    <div class="category-item">Genel iş süreçleri ve verimlilik</div>
+                </div>
+                <a class="btn btn-primary btn-lg mt-3" href="/Home/SolutionDetails">Daha Fazla Bilgi</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Çözüm Yaz Bölümü -->
+    <div class="solution-infoalt container text-center mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Çözüm yazmak istiyorsan</h2>
+                <p>Torun çözüm ve destek platformunda, çeşitli iş ve yaşam problemlerine inovatif çözümler bulabilirsiniz. Platformumuz, çalışanlarımızın bilgi ve deneyimlerini paylaşarak daha iyi bir çalışma ortamı yaratmayı hedefler.</p>
+                <p>Çözüm kategorilerimiz:</p>
+                <div class="solution-categories">
+                    <div class="category-item2">Bilgisayar ve donanım sorunları</div>
+                    <div class="category-item2">Ağ ve internet bağlantı problemleri</div>
+                    <div class="category-item2">Yazılım ve güncelleme hataları</div>
+                    <div class="category-item2">Genel iş süreçleri ve verimlilik</div>
+                </div>
+                <a class="btn btn-primary btn-lg mt-3" href="/Home/CreateSolution">Çözüm Yaz</a>
+            </div>
+            <div class="col-md-6">
+                <img src="~/images/isci.jpg" alt="Çözüm Bilgisi" class="img-fluid  small-img2 rounded">
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center" id="main-content-body">
+        <!-- Alt Kısım -->
+        <div class="bottom-section mt-5">
+            <!-- Üç tıklanabilir kutu -->
+            <div class="row">
+                @for (int i = 0; i < topSolutions.Count; i++)
+                {
+                    var solution = topSolutions[i];
+                    string imagePath = "";
+                    
+                    // Specify your custom images here
+                    if (i == 0) imagePath = Url.Content("~/images/img4.jpg");
+                    if (i == 1) imagePath = Url.Content("~/images/img2.jpg");
+                    if (i == 2) imagePath = Url.Content("~/images/img3.jpg");
+
+                    <div class="col-md-4">
+                        <div class="card clickable-card" onclick="location.href='@Url.Action("SolutionDet", "Solutions", new { id = solution.Id })'">
+                            <img class="card-img-top fixed-size" src="@imagePath" alt="@solution.Title">
+                            <div class="card-body">
+                                <h5 class="card-title">@solution.Title</h5>
+                                <p class="card-text">@solution.Problem</p>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer mt-5">
+        <div class="container d-flex align-items-start">
+            <div class="mr-3">
+                <a href ="/Home/Index"><img src="~/images/beyazLogo.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <div class="resources mr-auto">
+                <h5>İhtiyacınız Olabilecek Gereçler</h5>
+                <ul>
+                    <li><a href="/resources/KVKKAydın.pdf" target="_blank">KVKK Aydınlatma Metni</a></li>
+                    <li><a href="/resources/KVKKBasv.pdf" target="_blank">KVKK Başvuru Formu</a></li>
+                    <li><a href="/resources/Cerez_Politikasi.pdf" target="_blank">Çerez Politikası</a></li>
+                </ul>
+            </div>
+            <div class="ml-3">
+                <h5>İletişim Bilgileri</h5>
+                <a href="https://maps.app.goo.gl/vXNSqimWnfJVmk559" target="_blank">GOSB İhsan Dede Cad. No:116, 41400<br>Gebze/Kocaeli, TÜRKİYE</a>
+                <p>T: +90 262 677 15 00<br>
+                F: +90 262 677 15 15<br>
+                <a href="mailto:inquiry@torunmetal.com" target="_blank"> E: inquiry@torunmetal.com</a>
+            </div>
+            <div class="ml-auto">
+                <h5>Bizi Takip Edin</h5>
+                <a href="https://www.instagram.com/torunmetal/"><img src="~/images/instagramm.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://tr.linkedin.com/company/torungroup"><img src="~/images/linkedinn.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://www.youtube.com/c/torunmetalgroup"><img src="~/images/youtubee.png" alt="Youtube" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <span>Torun Destek</span>
+            <button id="chat-close" class="chat-close">&times;</button>
+        </div>
+        <div class="chat-body">
+            <div id="chat-messages" class="chat-messages"></div>
+            <input type="text" id="chat-input" class="chat-input" placeholder="Mesajınızı yazın...">
+            <button id="chat-send" class="chat-send">Gönder</button>
+        </div>
+    </div>
+
+    <button id="chat-open" class="chat-open">
+        <img src="~/images/500X500_RED_LOGO.webp" alt="Logo">
+        <span>Torun Destek</span>
+    </button>
+    <!--
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <span>Torun Destek</span>
+            <button id="chat-close" class="chat-close">&times;</button>
+        </div>
+        <div class="chat-body">
+            <div id="chat-messages" class="chat-messages"></div>
+            <input type="text" id="chat-input" class="chat-input" placeholder="Mesajınızı yazın...">
+            <button id="chat-send" class="chat-send">Gönder</button>
+        </div>
+    </div>
+
+    <button id="chat-open" class="chat-open">
+        <img src="~/images/500X500_RED_LOGO.webp" alt="Logo">
+        <span>Torun Destek</span>
+    </button>
+-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/custom.js"></script>
+    <script src="~/js/chat.js"></script>
+    <script>
+        document.getElementById('chat-open').addEventListener('click', function() {
+            document.getElementById('chat-widget').style.display = 'flex';
+            this.style.display = 'none';
+        });
+
+        document.getElementById('chat-close').addEventListener('click', function() {
+            document.getElementById('chat-widget').style.display = 'none';
+            document.getElementById('chat-open').style.display = 'flex';
+        });
+
+        document.getElementById('chat-send').addEventListener('click', async () => {
+            const message = document.getElementById('chat-input').value;
+
+            try {
+                const response = await fetch('/AI/GetAIResponse', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ prompt: message })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const chatMessages = document.getElementById('chat-messages');
+
+                // Kullanıcı mesajı
+                const userMessageElement = document.createElement('div');
+                userMessageElement.classList.add('user-message');
+                userMessageElement.textContent = message;
+                chatMessages.appendChild(userMessageElement);
+
+                // Yapay zeka cevabı
+                const botMessageElement = document.createElement('div');
+                botMessageElement.classList.add('bot-message');
+                botMessageElement.textContent = data.choices[0].text;
+                chatMessages.appendChild(botMessageElement);
+                
+                // Scroll to the bottom of the chat
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            } catch (error) {
+                console.error('Error:', error);
+                const chatMessages = document.getElementById('chat-messages');
+
+                const errorElement = document.createElement('div');
+                errorElement.classList.add('bot-message');
+                errorElement.textContent = `Bir hata oluştu: ${error.message}`;
+                chatMessages.appendChild(errorElement);
+            } finally {
+                document.getElementById('chat-input').value = '';
+            }
+        });
+    </script>
+    <style>
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+        }
+
+        .chat-header {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-body {
+            background: #fff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+
+        .chat-input {
+            width: calc(100% - 80px);
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .chat-send {
+            padding: 10px;
+        }
+
+        .chat-open {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-open img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .chat-close {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .user-message {
+            text-align: right;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+
+        .bot-message {
+            text-align: left;
+            background-color: #f1f1f1;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+    </style>
+
+</body>
+</html>

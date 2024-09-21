@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    animation: fadeIn 2s;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../images/img4.jpg'); /* Arka plan resmi */
+    background-size: cover; /* Resmi tam ekran kapla */
+    background-position: center; /* Ortala */
+    background-attachment: fixed; /* Arka planı sabitle */
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+main {
+    flex: 1; /* İçeriğin header ve footer arasında yer almasını sağlar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; /* Konteynırı daha da küçülttük */
+    background: rgba(255, 255, 255, 0.8); /* Yarı saydam beyaz arka plan */
+    padding: 20px; /* İçeriğin etrafına boşluk ekledik */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto; /* Yatayda ortala */
+}
+
+.container-inner .form-group {
+    margin-bottom: 10px; /* Form elemanları arasındaki boşluğu azalttık */
+}
+
+
+.header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo img {
+    height: 60px;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header nav a {
+    color: #000;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.header nav a:hover {
+    color: #800000;
+}
+
+.header nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #800000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.header nav a:hover::after {
+    width: 100%;
+}
+
+.header nav a:focus {
+    outline: none;
+}
+
+.header nav a:active {
+    color: #800000;
+}
+
+.display-4 {
+    font-weight: bold;
+    color: #800000;
+    font-size: 2rem; /* Başlık boyutunu biraz küçülttük */
+}
+
+.btn-primary {
+    background-color: #800000;
+    border-color: #800000;
+}
+
+.btn-primary:hover {
+    background-color: #a00000;
+    border-color: #a00000;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Yüksekliği arttırdık */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Logonun boyutunu büyüttük */
+    margin-right: 10px; /* Logonun yanına biraz boşluk ekledik */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-text span {
+    color: rgb(168, 5, 5);
+    font-size: 1.5rem; /* Yazı boyutunu büyüttük */
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    background-color: #800000;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+    color: white;
+    margin: 0;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 300; /* Daha ince bir yazı ağırlığı */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.logo-img {
+    height: 60px; /* Same height as in header */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.clickable-card:hover {
+    transform: scale(1.05);
+}
+
+.fixed-size {
+    height: 200px;
+    object-fit: cover;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resources ul li {
+    margin: 10px 0;
+}
+
+.resources ul li a {
+    color: #FFFFFF; /* Same color as "İletişim Bilgileri" */
+    text-decoration: none;
+    font-size: 0.9rem; /* Same font size */
+    font-weight: 300; /* Same font weight */
+}
+
+.resources ul li a:hover {
+    text-decoration: underline;
+}
+
+.input-group-text {
+    background-color: #ffffff;
+    border-right: none;
+}
+
+.input-group .form-control {
+    border-left: none;
+}

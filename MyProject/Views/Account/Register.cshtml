@@ -1,0 +1,174 @@
+@model SolutionSharingApp.Models.User
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<!DOCTYPE html>
+<html dir="ltr" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="~/css/login.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header" id="main-content">
+        <div class="container logo d-flex align-items-center">
+            <a href="/Home/Index"><img src="~/images/logo.png" alt="Logo" class="logo-img"></a>
+            <nav class="ml-auto">
+                <a href="/Home/Index">ANA SAYFA</a>
+                <a href="/Home/SolutionDetails">ÇÖZÜMLER</a>
+                <a href="/Home/CreateSolution">ÇÖZÜM YAZMA</a>
+                <a href="/Home/AdminLogin">ADMİN GİRİŞ</a>
+                <a href="/Account/Register">KAYIT OL</a>
+                <a href="/Home/Login">GİRİŞ YAP</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="center-container">
+                <div class="container-inner">
+                    <h2 class="display-4">Kayıt Ol</h2>
+                    <form method="post" action="/Account/Register">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Ad" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Soyad" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="Password" name="Password" placeholder="Şifre" required>
+                            </div>
+                            <span id="passwordError" class="text-danger" style="display:none;">Şifre en az 8 karakter uzunluğunda, harf, rakam ve özel karakter içermelidir.</span>
+                            <div id="passwordStrength" class="mt-2">
+                                <p><span id="lengthCheck" class="text-danger">✖</span> En az 8 karakter, bir harf, bir rakam ve özel karakter içermelidir.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Şifreyi Tekrar Girin" required>
+                            </div>
+                            <span id="confirmPasswordError" class="text-danger" style="display:none;">Şifreler uyuşmuyor</span>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <input type="date" class="form-control" id="BirthDate" name="BirthDate" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Kayıt Ol</button>
+                        @if (TempData["ErrorMessage"] != null)
+                        {
+                            <p class="text-danger mt-3">@TempData["ErrorMessage"]</p>
+                        }
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="container d-flex align-items-start">
+            <div class="mr-3">
+                <a href="/Home/Index"><img src="~/images/beyazLogo.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <div class="resources mr-auto">
+                <h5>İhtiyacınız Olabilecek Gereçler</h5>
+                <ul>
+                    <li><a href="/resources/KVKKAydın.pdf" target="_blank">KVKK Aydınlatma Metni</a></li>
+                    <li><a href="/resources/KVKKBasv.pdf" target="_blank">KVKK Başvuru Formu</a></li>
+                    <li><a href="/resources/Cerez_Politikasi.pdf" target="_blank">Çerez Politikası</a></li>
+                </ul>
+            </div>
+
+            <div class="ml-3">
+                <h5>İletişim Bilgileri</h5>
+                <a href="https://maps.app.goo.gl/vXNSqimWnfJVmk559" target="_blank">GOSB İhsan Dede Cad. No:116, 41400<br>Gebze/Kocaeli, TÜRKİYE</a>
+                <p>T: +90 262 677 15 00<br>
+                F: +90 262 677 15 15<br>
+                <a href="mailto:inquiry@torunmetal.com" target="_blank"> E: inquiry@torunmetal.com</a>
+            </div>
+            <div class="ml-auto">
+                <h5>Bizi Takip Edin</h5>
+                <a href="https://www.instagram.com/torunmetal/"><img src="~/images/instagramm.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://tr.linkedin.com/company/torungroup"><img src="~/images/linkedinn.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://www.youtube.com/c/torunmetalgroup"><img src="~/images/youtubee.png" alt="Youtube" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#Password').on('keyup', function () {
+                var password = $(this).val();
+                var lengthCheck = password.length >= 8;
+                var letterCheck = /[a-zA-Z]/.test(password);
+                var numberCheck = /\d/.test(password);
+                var specialCheck = /[!$%^&*(),.?-":{}|<>]/.test(password);
+
+                $('#lengthCheck').toggleClass('text-danger', !lengthCheck).toggleClass('text-success', lengthCheck).text(lengthCheck ? '✔' : '✖');
+                $('#letterCheck').toggleClass('text-danger', !letterCheck).toggleClass('text-success', letterCheck).text(letterCheck ? '✔' : '✖');
+                $('#numberCheck').toggleClass('text-danger', !numberCheck).toggleClass('text-success', numberCheck).text(numberCheck ? '✔' : '✖');
+                $('#specialCheck').toggleClass('text-danger', !specialCheck).toggleClass('text-success', specialCheck).text(specialCheck ? '✔' : '✖');
+            });
+
+            $('form').submit(function (e) {
+                var password = $('#Password').val();
+                var confirmPassword = $('#ConfirmPassword').val();
+                var lengthCheck = password.length >= 8;
+                var letterCheck = /[a-zA-Z]/.test(password);
+                var numberCheck = /\d/.test(password);
+                var specialCheck = /[!$%^&*(),.?-":{}|<>]/.test(password);
+
+                if (!lengthCheck || !letterCheck || !numberCheck || !specialCheck) {
+                    e.preventDefault();
+                    $('#passwordError').show();
+                } else {
+                    $('#passwordError').hide();
+                }
+
+                if (password !== confirmPassword) {
+                    e.preventDefault();
+                    $('#confirmPasswordError').show();
+                } else {
+                    $('#confirmPasswordError').hide();
+                }
+            });
+        });
+    </script>
+    <script src="~/js/custom.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>
+</html>

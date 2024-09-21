@@ -1,0 +1,182 @@
+[
+    {
+        "Id": "1",
+        "Title": "Bilgisayar Donanım Sorunu",
+        "Author": "Ahmet Yılmaz",
+        "DateCreated": "2023-06-01T00:00:00",
+        "Topic": "Donanım",
+        "Problem": "Bilgisayarın açılmama sorunu.",
+        "SolutionContent": "Güç kaynağının değiştirilmesi sorunu çözdü.",
+        "Photos": [
+            "~/images/sample1.jpg"
+        ],
+        "PhotoDescription": "Yeni güç kaynağı",
+        "Keywords": [
+            "bilgisayar",
+            "donanım",
+            "güç kaynağı"
+        ]
+    },
+    {
+        "Id": "2",
+        "Title": "Ağ Bağlantı Problemi",
+        "Author": "Mehmet Demir",
+        "DateCreated": "2023-05-15T00:00:00",
+        "Topic": "Network",
+        "Problem": "İnternet bağlantısı sık sık kesiliyor.",
+        "SolutionContent": "Router yeniden yapılandırıldı ve sorun çözüldü.",
+        "Photos": [
+            "~/images/sample2.jpg"
+        ],
+        "PhotoDescription": "Router konfigürasyonu",
+        "Keywords": [
+            "ağ",
+            "internet",
+            "router"
+        ]
+    },
+    {
+        "Id": "3",
+        "Title": "Yazılım Güncelleme Sorunu",
+        "Author": "Elif Kaya",
+        "DateCreated": "2023-07-20T00:00:00",
+        "Topic": "Yazılım",
+        "Problem": "Güncelleme sırasında yazılım hatası alınıyor.",
+        "SolutionContent": "Yazılım yeniden yüklendi ve güncelleme başarıyla tamamlandı.",
+        "Photos": [
+            "~/images/sample3.jpg"
+        ],
+        "PhotoDescription": "Yazılım güncelleme ekranı",
+        "Keywords": [
+            "yazılım",
+            "güncelleme",
+            "hata"
+        ]
+    },
+    {
+        "Id": "4",
+        "Title": "Genel İş Güvenliği Önlemleri",
+        "Author": "Ayşe Şahin",
+        "DateCreated": "2023-08-10T00:00:00",
+        "Topic": "Genel",
+        "Problem": "İş güvenliği konusunda eksiklikler.",
+        "SolutionContent": "Yeni iş güvenliği önlemleri alındı ve çalışanlara eğitim verildi.",
+        "Photos": [
+            "~/images/sample4.jpg"
+        ],
+        "PhotoDescription": "İş güvenliği ekipmanları",
+        "Keywords": [
+            "iş güvenliği",
+            "eğitim",
+            "önlemler"
+        ]
+    },
+    {
+        "Id": "5",
+        "Title": "Kamera Sistemi Kurulumu",
+        "Author": "Ali Veli",
+        "DateCreated": "2023-04-25T00:00:00",
+        "Topic": "Donanım",
+        "Problem": "Kamera sisteminin kurulumu.",
+        "SolutionContent": "Yeni kameralar kuruldu ve sistem yapılandırıldı.",
+        "Photos": [
+            "~/images/sample5.jpg"
+        ],
+        "PhotoDescription": "Yeni kurulan kamera",
+        "Keywords": [
+            "kamera",
+            "kurulum",
+            "donanım"
+        ]
+    },
+    {
+        "Id": "6",
+        "Title": "Switch Konfigürasyonu",
+        "Author": "Canan Arslan",
+        "DateCreated": "2023-03-18T00:00:00",
+        "Topic": "Network",
+        "Problem": "Switch konfigürasyonunda sorunlar.",
+        "SolutionContent": "Switch yeniden yapılandırıldı ve ağ sorunları giderildi.",
+        "Photos": [
+            "~/images/sample6.jpg"
+        ],
+        "PhotoDescription": "Switch yapılandırma ekranı",
+        "Keywords": [
+            "switch",
+            "network",
+            "konfigürasyon"
+        ]
+    },
+    {
+        "Id": "7",
+        "Title": "Yazıcı Bağlantı Problemi",
+        "Author": "Osman Güneş",
+        "DateCreated": "2023-02-10T00:00:00",
+        "Topic": "Donanım",
+        "Problem": "Yazıcı bilgisayara bağlanmıyor.",
+        "SolutionContent": "Yazıcı sürücüleri güncellendi ve bağlantı sorunu çözüldü.",
+        "Photos": [
+            "~/images/sample7.jpg"
+        ],
+        "PhotoDescription": "Güncellenen yazıcı sürücüleri",
+        "Keywords": [
+            "yazıcı",
+            "bağlantı",
+            "sürücü"
+        ]
+    },
+    {
+        "Id": "8",
+        "Title": "E-posta Sunucusu Sorunu",
+        "Author": "Fatma Yıldız",
+        "DateCreated": "2023-01-05T00:00:00",
+        "Topic": "Yazılım",
+        "Problem": "E-posta sunucusu çalışmıyor.",
+        "SolutionContent": "Sunucu yeniden başlatıldı ve sorun çözüldü.",
+        "Photos": [
+            "~/images/sample8.jpg"
+        ],
+        "PhotoDescription": "E-posta sunucusu",
+        "Keywords": [
+            "e-posta",
+            "sunucu",
+            "yazılım"
+        ]
+    },
+    {
+        "Id": "9",
+        "Title": "Firewall Yapılandırması",
+        "Author": "Hakan Çelik",
+        "DateCreated": "2023-06-30T00:00:00",
+        "Topic": "Network",
+        "Problem": "Firewall kuralları yanlış yapılandırılmış.",
+        "SolutionContent": "Kurallar yeniden yapılandırıldı ve güvenlik sağlandı.",
+        "Photos": [
+            "~/images/sample9.jpg"
+        ],
+        "PhotoDescription": "Firewall konfigürasyonu",
+        "Keywords": [
+            "firewall",
+            "güvenlik",
+            "network"
+        ]
+    },
+    {
+        "Id": "10",
+        "Title": "Genel Bakım Çalışmaları",
+        "Author": "Seda Kılıç",
+        "DateCreated": "2023-05-05T00:00:00",
+        "Topic": "Genel",
+        "Problem": "Genel bakım çalışmaları yapılması gerekiyor.",
+        "SolutionContent": "Bakım çalışmaları tamamlandı ve sistemler kontrol edildi.",
+        "Photos": [
+            "~/images/sample10.jpg"
+        ],
+        "PhotoDescription": "Bakım çalışmaları",
+        "Keywords": [
+            "bakım",
+            "genel",
+            "sistem"
+        ]
+    }
+]

@@ -1,0 +1,223 @@
+@model SolutionSharingApp.Models.Solution
+
+@{
+    ViewData["Title"] = "Çözüm Detayları";
+
+    var adminName = ViewBag.Admin as string;
+}
+
+<!DOCTYPE html>
+<html dir="ltr" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/css/custom.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            color: #800000;
+            margin-bottom: 30px;
+        }
+
+        .solution-details {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .solution-details h3 {
+            color: #800000;
+        }
+
+        .solution-details h4 {
+            color: #333333;
+            margin-top: 20px;
+        }
+
+        .solution-details p {
+            color: #555555;
+        }
+
+        .photo-container {
+            margin: 10px 0;
+        }
+
+        .photo-container img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            max-width: 500px; /* Fotoğrafın boyutunu küçültmek için */
+            transition: transform 0.3s ease;
+        }
+
+        .photo-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-description {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px; /* Fotoğrafın üst kısmında olacak */
+        }
+
+        .photo-description:hover {
+            background-color: #e2e6ea;
+        }
+
+        .photo-description span {
+            font-weight: bold;
+        }
+
+        .file-container {
+            margin: 10px 0;
+        }
+
+        .file-container a {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px; /* Dosyanın üst kısmında olacak */
+        }
+
+        .file-container a:hover {
+            background-color: #e2e6ea;
+        }
+
+        .file-description {
+            margin-bottom: 10px; /* Açıklamanın üst kısmında olacak */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container logo-container">
+            <div class="logo">
+                <a href="/Home/Index"><img src="~/images/logo.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <nav class="ml-auto">
+                <a href="/Solutions/SolutionAdmin">ÇÖZÜM YÖNETİMİ</a>
+                 @if (!string.IsNullOrEmpty(adminName))
+                {
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hoş geldiniz, @adminName!
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userMenu">
+                            <a class="dropdown-item" href="/Second/Logout">Çıkış Yap</a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <a href="/Home/Login">GİRİŞ YAP</a>
+                }
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Çözüm Detayları</h1>
+        <div class="solution-details">
+            <h3>@Model.Title</h3>
+            <p><strong>Kullanıcı adı:</strong> @Model.Author</p>
+            <p><strong>Konu:</strong> @Model.Category</p>
+            <h4>Sorun</h4>
+            <p>@Model.Problem</p>
+            <h4>Çözüm</h4>
+            <p>@Model.SolutionContent</p>
+            <h4>Fotoğraflar</h4>
+            <div>
+                @if (Model.Photos != null && Model.Photos.Any())
+                {
+                    var photos = Model.Photos;
+                    var photoDescriptions = Model.PhotoDescriptions ?? new List<string>();
+
+                    for (int i = 0; i < photos.Count; i++)
+                    {
+                        <div class="photo-container">
+                            <div class="photo-description">
+                                <span>@(i + 1).</span> @(photoDescriptions.Count > i ? photoDescriptions[i] : "Açıklama yok.")
+                            </div>
+                            <img src="@photos[i]" alt="Çözüm Fotoğrafı" class="img-thumbnail" />
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>Fotoğraf bulunmamaktadır.</p>
+                }
+            </div>
+            <h4>Dosyalar</h4>
+            <div>
+                @if (Model.Files != null && Model.Files.Any())
+                {
+                    var files = Model.Files;
+                    var fileDescriptions = Model.FileDescriptions ?? new List<string>();
+
+                    for (int i = 0; i < files.Count; i++)
+                    {
+                        <div class="file-container">
+                            <div class="file-description">
+                                <span>@(i + 1).</span> @(fileDescriptions.Count > i ? fileDescriptions[i] : "Açıklama yok.")
+                            </div>
+                            <a href="@files[i]" target="_blank">@files[i]</a>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>Dosya bulunmamaktadır.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container d-flex align-items-start">
+            <div class="mr-3">
+                <a href="/Home/Index"><img src="~/images/beyazLogo.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <div class="resources mr-auto">
+                <h5>İhtiyacınız Olabilecek Gereçler</h5>
+                <ul>
+                    <li><a href="/resources/KVKKAydın.pdf" target="_blank">KVKK Aydınlatma Metni</a></li>
+                    <li><a href="/resources/KVKKBasv.pdf" target="_blank">KVKK Başvuru Formu</a></li>
+                    <li><a href="/resources/Cerez_Politikasi.pdf" target="_blank">Çerez Politikası</a></li>
+                </ul>
+            </div>
+
+            <div class="ml-3">
+                <h5>İletişim Bilgileri</h5>
+                <a href="https://maps.app.goo.gl/vXNSqimWnfJVmk559" target="_blank">GOSB İhsan Dede Cad. No:116, 41400<br>Gebze/Kocaeli, TÜRKİYE</a>
+                <p>T: +90 262 677 15 00<br>
+                F: +90 262 677 15 15<br>
+                <a href="mailto:inquiry@torunmetal.com" target="_blank"> E: inquiry@torunmetal.com</a>
+            </div>
+            <div class="ml-auto">
+                <h5>Bizi Takip Edin</h5>
+                <a href="https://www.instagram.com/torunmetal/"><img src="~/images/instagramm.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://tr.linkedin.com/company/torungroup"><img src="~/images/linkedinn.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="https://www.youtube.com/c/torunmetalgroup"><img src="~/images/youtubee.png" alt="Youtube" class="social-icon"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/custom.js"></script>
+</body>
+</html>
